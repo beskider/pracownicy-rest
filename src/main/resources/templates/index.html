@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="pl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/styles.css" th:href="@{/css/styles.css}" />
+    <title>Serwis sieciowy REST</title>
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h2 class="display-4">Pracownicy</h2>
+            <hr class="my-4">
+            <p class="lead">Prosty serwis sieciowy REST - baza pracowników.</p>
+        </div>
+        <div class="row">
+            <div class="col-12">
+            <h4>Endpointy</h4>
+                <div class="description">
+                    <a th:href="@{/swagger-ui.html#/pracownicy-controller}">(szczegóły)</a>
+                </div>
+                <div>
+                    <a th:href="@{/swagger-ui.html#/pracownicy-controller}">
+                        <img th:src="@{/images/api.jpg}" src="images/api.jpg" class="api-table" title="Endpointy" alt="Endpointy aplikacji">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-12">
+                <h4>Lista pracowników</h4>
+            </div>
+            <div class="col-2"></div>
+            <div class="col-8">
+                <div th:if="${#lists.isEmpty(pracownicy)}">Brak pracowników w bazie.</div>
+                <div th:unless="${#lists.isEmpty(pracownicy)}">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Nazwa</th>
+                            <th scope="col">Numer kontaktowy</th>
+                            <th scope="col">Pensja</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr th:each="pracownik : ${pracownicy}">
+                            <th scope="row" th:text="${pracownik.id}">Id</th>
+                            <td th:text="${pracownik.nazwa}">Nazwa</td>
+                            <td th:text="${pracownik.numerKontaktowy}">Numer kontaktowy</td>
+                            <td th:text="${#numbers.formatDecimal(pracownik.pensja, 1, 'WHITESPACE', 2, 'COMMA')} + ' zł'">Pensja</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <p class="description">Koniec listy</p>
+                </div>
+            </div>
+            <div class="col-2"></div>
+        </div>
+    </div>
+</body>
+</html>
