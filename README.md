@@ -14,6 +14,7 @@ Dokumentacja interfejsu API pod adresem http://localhost:8080/swagger-ui.html
 * [Maven](https://maven.apache.org/)
 * [Lombok](https://projectlombok.org/)
 * [Swagger](https://swagger.io/)
+* Plik `.gitignore` wygenerowano przy pomocy witryny [gitignore.io](https://www.gitignore.io)
 
 ## Uruchamianie
 
