@@ -46,7 +46,7 @@ public class PracownicyController {
         pracownicyRepository.deleteById(id);
     }
 
-    @PutMapping("{id}")
+    @PutMapping("/{id}")
     public Pracownik update(@RequestBody Pracownik pracownik, @PathVariable Long id) {
         if (pracownik.getId() != id) {
             throw new PracownikIdNieprawidlowyException();

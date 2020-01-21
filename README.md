@@ -15,6 +15,9 @@ Dokumentacja interfejsu API pod adresem http://localhost:8080/swagger-ui.html
 * [Lombok](https://projectlombok.org/)
 * [Swagger](https://swagger.io/)
 * [Thymeleaf](https://www.thymeleaf.org/)
+* [Apache Commons Lang](http://commons.apache.org/proper/commons-lang/)
+* [JUnit](https://junit.org/junit5/) & [AssertJ](https://joel-costigliola.github.io/assertj/)
+* [REST-assured](http://rest-assured.io/)
 * Plik `.gitignore` wygenerowano przy pomocy witryny [gitignore.io](https://www.gitignore.io)
 
 ## Uruchamianie
