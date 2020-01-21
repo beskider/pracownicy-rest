@@ -1,11 +1,9 @@
 package com.example.pracownicy;
 
-import com.example.pracownicy.controller.PracownicyController;
 import com.example.pracownicy.domain.Pracownik;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import org.junit.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 
