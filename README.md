@@ -7,6 +7,8 @@ Main page http://localhost:8080/
 
 API documentation on http://localhost:8080/swagger-ui.html
 
+![Swagger endpoints](./images/api_m.jpg)
+
 ## Technologies
 
 * [Java 8](https://www.java.com/)
@@ -46,6 +48,8 @@ pracowników w bazie.
 Strona główna aplikacji http://localhost:8080/
 
 Dokumentacja interfejsu API pod adresem http://localhost:8080/swagger-ui.html
+
+![Swagger endpoints](./images/api_m.jpg)
 
 ## Użyte technologie
 
