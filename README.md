@@ -51,7 +51,7 @@ Strona główna aplikacji http://localhost:8080/
 
 Dokumentacja interfejsu API pod adresem http://localhost:8080/swagger-ui.html
 
-![Swagger endpoints](./images/api_m2.jpg)
+![Swagger endpoints](./images/api_m.jpg)
 
 ## Użyte technologie
 
