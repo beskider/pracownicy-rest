@@ -1,7 +1,7 @@
 # Pracownicy REST
 
 Application to management the employee database. HTTP endpoints using the GET, POST, PUT and DELETE methods allow data manipulation (creating, viewing, modifying and deleting - [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete))
-employees in the base. The application can generate a PDF or XLS employee summary.
+employees in the base. The application can generate PDF or XLS employee summary.
 
 Main page http://localhost:8080/
 
