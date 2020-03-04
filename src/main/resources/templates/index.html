@@ -36,6 +36,10 @@
             <div class="col-8">
                 <div th:if="${#lists.isEmpty(pracownicy)}">Brak pracowników w bazie.</div>
                 <div th:unless="${#lists.isEmpty(pracownicy)}">
+                    <div class="icons">
+                        <a th:href="@{/api/pracownicy/createPdf}"><img th:src="@{/images/pdf_icon.png}" src="images/pdf_icon.png" class="icon" alt="Przycisk pobierz plik PDF"></a>
+                        <a th:href="@{/api/pracownicy/createExcel}"><img th:src="@{/images/excel_icon.png}" src="images/excel_icon.png" class="icon" alt="Przycisk pobierz plik Excel"></a>
+                    </div>
                     <table class="table">
                         <thead>
                         <tr>
@@ -54,7 +58,7 @@
                         </tr>
                         </tbody>
                     </table>
-                    <p class="description">Koniec listy</p>
+                    <p class="description">Koniec listy
                 </div>
             </div>
             <div class="col-2"></div>

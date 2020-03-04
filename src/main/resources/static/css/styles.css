@@ -11,3 +11,12 @@
 .api-table {
     width: 100%;
 }
+
+.icons {
+    text-align: right;
+}
+
+.icons img {
+   width: 3em;
+   margin-bottom: 1em;
+}

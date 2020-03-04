@@ -9,12 +9,12 @@
 </head>
 <body>
     <div class="container">
-        <div class="alert alert-warning" role="alert">
+        <div class="alert alert-danger" role="alert">
             <h2 class="display-4">Błąd <span th:text="${status}">status</span></h2>
             <b><span th:text="${error}">error</span></b>
             <p th:text="${message}">message</p>
             <hr>
-            <a class="btn btn-warning" th:href="@{/}" role="button">Powrót do strony głównej</a>
+            <a class="btn btn-danger" th:href="@{/}" role="button">Powrót do strony głównej</a>
         </div>
     </div>
 </body>

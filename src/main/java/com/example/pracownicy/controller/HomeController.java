@@ -1,6 +1,7 @@
 package com.example.pracownicy.controller;
 
 import com.example.pracownicy.repository.PracownicyRepository;
+import com.example.pracownicy.service.PracownicyService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,15 +11,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/")
 public class HomeController {
 
-    final PracownicyRepository pracownicyRepository;
+    private final PracownicyService pracownicyService;
 
-    public HomeController(PracownicyRepository pracownicyRepository) {
-        this.pracownicyRepository = pracownicyRepository;
+    public HomeController(PracownicyService pracownicyService) {
+        this.pracownicyService = pracownicyService;
     }
 
     @GetMapping
     public String home(Model model) {
-        model.addAttribute("pracownicy", pracownicyRepository.findAll());
+        model.addAttribute("pracownicy", pracownicyService.getAll());
         return "index";
     }
 
