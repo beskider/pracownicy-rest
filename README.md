@@ -45,7 +45,7 @@ or
 # Pracownicy REST
 
 Aplikacja umożliwia zarządzanie bazą pracowników. Wystawione endpointy HTTP przy pomocy metod GET, POST, PUT oraz DELETE umożliwiają manipulowanie danymi (tworzenie, przeglądanie, modyfikację i usuwanie - [CRUD](https://pl.wikipedia.org/wiki/CRUD)) 
-pracowników w bazie. Aplikacja umożliwia wygenerowanie zestawienia do pliku PDF oraz XLS.
+pracowników w bazie. Aplikacja umożliwia generowanie zestawień do plików PDF oraz XLS.
 
 Strona główna aplikacji http://localhost:8080/
 
