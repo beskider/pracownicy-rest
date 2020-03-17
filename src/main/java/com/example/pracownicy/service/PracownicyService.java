@@ -8,6 +8,8 @@ import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
 import org.apache.poi.hssf.usermodel.*;
 import org.apache.poi.hssf.util.HSSFColor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -24,37 +26,48 @@ public class PracownicyService {
 
     private final PracownicyRepository pracownicyRepository;
 
+    private static final Logger logger = LoggerFactory.getLogger(PracownicyService.class);
+
     @Autowired
     public PracownicyService(PracownicyRepository pracownicyRepository) {
         this.pracownicyRepository = pracownicyRepository;
     }
 
     public List<Pracownik> getAll() {
+        logger.debug("Wywolano metode getAll()");
         return pracownicyRepository.findAll();
     }
 
     public Optional<Pracownik> findById(Long id) {
+        logger.debug("Wywolano metode findById(id), id={}", id);
         return pracownicyRepository.findById(id);
     }
 
     public List<Pracownik> findByNazwa(String nazwa) {
+        logger.debug("Wywolano metode findByNazwa(nazwa), nazwa={}", nazwa);
         return pracownicyRepository.findByNazwa(nazwa);
     }
 
     public Pracownik save(Pracownik pracownik) {
+        logger.debug("Wywolano metode save(pracownik)");
+        logger.info("Zapisano pracownika: {}", pracownik);
         return pracownicyRepository.save(pracownik);
     }
 
     public void deleteById(Long id) {
+        logger.debug("Wywolano metode deleteById(id), id={}", id);
+        logger.info("Usunięto pracownika, id={}", id);
         pracownicyRepository.deleteById(id);
     }
 
     public boolean createPdf(List<Pracownik> pracownicy, ServletContext context, HttpServletRequest request, HttpServletResponse response) {
+        logger.debug("Wywolano metode createPdf(), rozmiar przekazanej listy pracownikow: {}", pracownicy.size());
         Document document = new Document(PageSize.A4, 15, 15, 45, 30);
         try {
             String filePath = context.getRealPath("/resources/reports");
             File file = new File(filePath);
             boolean exists = new File(filePath).exists();
+            logger.debug("exists={}", exists);
             if(!exists) {
                 new File(filePath).mkdirs();
             }
@@ -174,10 +187,11 @@ public class PracownicyService {
     }
 
     public boolean createExcel(List<Pracownik> pracownicy, ServletContext context, HttpServletRequest request, HttpServletResponse response) {
-
+        logger.debug("Wywolano metode createExcel(), rozmiar przekazanej listy pracownikow: {}", pracownicy.size());
         String filePath = context.getRealPath("/resources/reports");
         File file = new File(filePath);
         boolean exists = new File(filePath).exists();
+        logger.debug("exists={}", exists);
         if(!exists) {
             new File(filePath).mkdirs();
         }
