@@ -3,7 +3,7 @@
 Application to management the employee database. HTTP endpoints using the GET, POST, PUT and DELETE methods allow data manipulation (creating, viewing, modifying and deleting - [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete))
 employees in the base. The application can generate PDF or XLS employee summary.
 
-The application logger is configured in the application.properties file, allows you to select the login level for each part of the application, available login levels: OFF, ERROR, WARN, INFO, DEBUG, TRACE.
+The application logger is configured in the `application.properties` file, allows you to select the login level for each part of the application, available login levels: OFF, ERROR, WARN, INFO, DEBUG, TRACE.
 
 Main page http://localhost:8080/
 
@@ -50,7 +50,7 @@ or
 Aplikacja umożliwia zarządzanie bazą pracowników. Wystawione endpointy HTTP przy pomocy metod GET, POST, PUT oraz DELETE umożliwiają manipulowanie danymi (tworzenie, przeglądanie, modyfikację i usuwanie - [CRUD](https://pl.wikipedia.org/wiki/CRUD)) 
 pracowników w bazie. Aplikacja umożliwia generowanie zestawień do plików PDF oraz XLS.
 
-Logger aplikacji konfigurowany jest w pliku application.properties, umożliwia wybór poziomu logowania dla każdej z części aplikacji, dostępne poziomy logowania: OFF, ERROR, WARN, INFO, DEBUG, TRACE.
+Logger aplikacji konfigurowany jest w pliku `application.properties`, umożliwia wybór poziomu logowania dla każdej z części aplikacji, dostępne poziomy logowania: OFF, ERROR, WARN, INFO, DEBUG, TRACE.
 
 Strona główna aplikacji http://localhost:8080/
 
