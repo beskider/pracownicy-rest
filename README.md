@@ -5,8 +5,6 @@ employees in the base. The application can generate PDF or XLS employee summary.
 
 The application logger is configured in the `application.properties` file, allows you to select the login level for each part of the application, available login levels: OFF, ERROR, WARN, INFO, DEBUG, TRACE.
 
-Main page http://localhost:8080/
-
 API documentation on http://localhost:8080/swagger-ui.html
 
 ![Swagger endpoints](./images/api_m.jpg)
@@ -51,8 +49,6 @@ Aplikacja umożliwia zarządzanie bazą pracowników. Wystawione endpointy HTTP 
 pracowników w bazie. Aplikacja umożliwia generowanie zestawień do plików PDF oraz XLS.
 
 Logger aplikacji konfigurowany jest w pliku `application.properties`, umożliwia wybór poziomu logowania dla każdej z części aplikacji, dostępne poziomy logowania: OFF, ERROR, WARN, INFO, DEBUG, TRACE.
-
-Strona główna aplikacji http://localhost:8080/
 
 Dokumentacja interfejsu API pod adresem http://localhost:8080/swagger-ui.html
 
